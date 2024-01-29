@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-# displays the content of the current working directory.
+# This script displays the content of the current directory in a list format
+# Where only the part of the name after the first dash is displayed
 
-for i in *
+for _ in *
 do
-    echo "$i" | cut -d'-' -f2
+    echo "$_" | cut -f 2 -d '-'
 done

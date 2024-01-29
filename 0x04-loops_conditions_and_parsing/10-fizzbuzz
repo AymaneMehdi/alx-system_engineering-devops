@@ -1,20 +1,18 @@
 #!/usr/bin/env bash
-# displays Best School 10 times.
+# This script displays numbers from 1 to 100.
 
-COUNTER=1
-while [ $COUNTER -lt 101 ]
+for number in {1..100}
 do
-    if [ $((COUNTER%15)) = 0 ]
+    if [ $((number % 3)) == 0 ] && [ $((number % 5)) == 0 ]
     then
         echo "FizzBuzz"
-    elif [ $((COUNTER%3)) = 0 ]
-    then
-        echo "Fizz"
-    elif [ $((COUNTER%5)) = 0 ]
+    elif [ $((number % 5)) == 0 ]
     then
         echo "Buzz"
+    elif [ $((number % 3)) == 0 ]
+    then
+        echo "Fizz"
     else
-        echo "$COUNTER"
+        echo "$number"
     fi
-    let COUNTER+=1
 done
